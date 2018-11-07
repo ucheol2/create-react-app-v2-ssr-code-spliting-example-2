@@ -7,6 +7,11 @@ const Greeter = Loadable({
   loading: Loading,
 })
 
+const Title = Loadable({
+  loader: () => import(`./Title`),
+  loading: Loading,
+})
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -21,7 +26,7 @@ class App extends Component {
 
     return (
       <div>
-        <h1>SSR, Code Spliting Example</h1>
+        <Title/>
         <button onClick={() => this.setState(({show}) => ({show: !show}))}>Toggle</button>
         {show && (
           <Greeter/>

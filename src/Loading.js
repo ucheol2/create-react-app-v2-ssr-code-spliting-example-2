@@ -5,9 +5,9 @@ const Loading = (props) => {
     if (props.timedOut) {
       return <div>Loader timed out!</div>;
     } else if (props.pastDelay) {
-      return <div>Loading...</div>;
+      return <div>Loading......</div>;
     } else {
-      return null;
+      return <div>Loading...</div>;
     }
   } else if (props.error) {
     return <div>Error! Component failed to load</div>;
