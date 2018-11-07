@@ -64,7 +64,12 @@ module.exports = {
       //filename: paths.serverLoadableJson
     //}),
   ],
+  optimization: {
+    minimize: false
+  },
   externals: {
-    'react-loadable': 'react-loadable'
+    'react-loadable': 'react-loadable',
+    'react': 'react',
+    'react-dom/server': 'react-dom/server',
   }
 };
